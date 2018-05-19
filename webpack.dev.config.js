@@ -10,18 +10,10 @@ const webpackConfig = require('./webpack.config');
 const HotModuleReplacementPlugin = webpack.HotModuleReplacementPlugin; // Hot reloading and inline style replacement
 
 webpackConfig.devServer = {
-    allowedHosts       : [
-        'local.hsbc-test.com'
-    ],
-    compress           : true,
-    contentBase        : path.join(__dirname, 'dev'),
-    historyApiFallback : true,
+    contentBase        : path.join(__dirname, 'dist'),
     hot                : true,
-    inline             : true,
-    noInfo             : true,
-    port               : 8080,
-    public             : 'local.hsbc-test.com:8080',
-    watchContentBase   : true
+    compress           : true,
+    port               : 8080
 };
 
 webpackConfig.devtool = 'inline-source-map';

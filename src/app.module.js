@@ -3,7 +3,7 @@ import './styles/main.scss';
 
 // Core Angular
 import angular from 'angular';
-import AppController from "./app.component";
+import { AppComponent, AppController } from "./app.component";
 
 // These all export the module name
 // import ngAnimateModuleName from 'angular-animate';
@@ -15,10 +15,8 @@ const dependencies = [
     // ngAnimateModuleName
 ];
 
+console.log('running angular999');
+
 angular.module('app', dependencies)
-    .controller(AppController, function() {
-        // Controller code
-    })
-    .config(function() {
-        // Config code
-    });
+    .component('appComponent', AppComponent);
+    // .controller('AppController', AppController);
