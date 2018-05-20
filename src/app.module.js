@@ -4,6 +4,8 @@ import './styles/main.scss';
 // Core Angular
 import angular from 'angular';
 import { AppComponent, AppController } from "./app.component";
+import CommonModule from './modules/common/common.module';
+import PackagesModule from './modules/packages/packages.module';
 
 // These all export the module name
 // import ngAnimateModuleName from 'angular-animate';
@@ -13,10 +15,10 @@ import { AppComponent, AppController } from "./app.component";
 
 const dependencies = [
     // ngAnimateModuleName
+    CommonModule.name,
+    PackagesModule.name
 ];
 
-console.log('running angular999');
-
 angular.module('app', dependencies)
-    .component('appComponent', AppComponent);
-    // .controller('AppController', AppController);
+    .component('appComponent', AppComponent)
+    .controller('appController', AppController);
