@@ -1,12 +1,23 @@
 <header-component></header-component>
 
 <div class="container">
-    <div class="row">
-        <div class="col-6">
-            <div class="packages-name-box">
-                <h2 class="homepage-title">Packages List Name</h2>
-                <packages-list-group pages-data="pagesPackageData"></packages-list-group>
+    <section class="package-list-section">
+        <h2 class="homepage-title text-center">Packages List Name</h2>
+        <div class="row">
+            <div class="col-6">
+                <div class="packages-name-box">
+                    <packages-list-group pages-data="pagesPackageDataLeft"></packages-list-group>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="packages-name-box">
+                    <packages-list-group pages-data="pagesPackageDataRight"></packages-list-group>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section class="package-chart-section">
+        <h2 class="homepage-title text-center">Packages Chart</h2>
+    </section>
 </div>

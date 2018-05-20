@@ -2,7 +2,7 @@ import angular from 'angular';
 
 export const PackagesListGroupComponent = {
     bindings: {
-        pagesData: '='
+        pagesData: '<'
     },
     template: require('./packages-list-group.component.html'),
     controller: class PackagesListGroupController {
@@ -10,7 +10,7 @@ export const PackagesListGroupComponent = {
             this.$ctrl = $scope.$ctrl;
         }
         $onInit() {
-            console.log(this.$ctrl, 'group init2');
+
         }
     }
 };
