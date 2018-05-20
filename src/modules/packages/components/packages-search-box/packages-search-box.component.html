@@ -1,0 +1,15 @@
+<div class="package-search-box-component">
+    <input class="form-control"
+           type="text"
+           placeholder="Search Package Name"
+           ng-model="package.packageName"
+           ng-init="package.packageName = ''">
+    <ul class="list-group"
+        ng-if="package.packageName !== '' && package.packageName !== null">
+        <li class="list-group-item"
+            ng-repeat="page in $ctrl.pagesData | filter:package">
+            {{ page.packageName }}
+        </li>
+    </ul>
+</div>
+

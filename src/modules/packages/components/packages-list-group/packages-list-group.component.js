@@ -10,7 +10,6 @@ export const PackagesListGroupComponent = {
             this.$ctrl = $scope.$ctrl;
         }
         $onInit() {
-
         }
     }
 };
