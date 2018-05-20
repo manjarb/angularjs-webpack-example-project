@@ -8,6 +8,7 @@ const path                          = require('path');
 const preprocess                    = require('preprocess');
 const webpack                       = require('webpack');
 const WebpackFilePreprocessorPlugin = require('webpack-file-preprocessor-plugin');
+const CopyWebpackPlugin             = require('copy-webpack-plugin');
 
 const devtool            = 'source-map';
 const preprocessContext  = {
@@ -72,13 +73,18 @@ const plugins = [
     new HtmlWebpackPlugin({
         hash     : true,
         inject   : 'body',
-        template : './src/index.html'
+        template : './src/public/index.html'
     }),
 
     new WebpackFilePreprocessorPlugin({
         pattern : /index\.html$/,
         process : (source) => preprocess.preprocess(source.toString(), preprocessContext)
-    })
+    }),
+
+    new CopyWebpackPlugin([{
+        from: 'src/assets',
+        to: 'assets'
+    }])
 ];
 
 const resolve = {

@@ -14,7 +14,7 @@ const uglifyOptions  = {
 
 config.output = {
     filename   : '[name].min.js',
-    path       : path.resolve(__dirname, 'src'),
+    path       : path.resolve(__dirname, 'dist'),
     publicPath : ''
 };
 
