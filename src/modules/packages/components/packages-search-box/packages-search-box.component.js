@@ -12,18 +12,20 @@ export const PackagesSearchBoxComponent = {
         '$scope',
         class PackagesSearchBoxController {
             constructor(ChartService, $scope) {
-                this.$scope = $scope;
+                this.scope = $scope;
                 this.$ctrl = $scope.$ctrl;
                 this.chartService = ChartService;
-                console.log(ChartService, 'ChartService');
-                console.log(this.chartService, 'this.chartService');
-                this.$scope.renderPieChart = this.renderPieChart.bind(this);
+                this.scope.isChartTrigger = false;
+                this.scope.renderPieChart = this.renderPieChart.bind(this);
             }
             $onInit() {
                 /// console.log(this.$ctrl, '$ctrl');
                 // console.log(this.$ctrl['pagesData'], 'pagesData');
             }
             renderPieChart(pack) {
+                this.scope.package.packageName = pack.packageName;
+                this.scope.isChartTrigger = true;
+
                 const ctx = document.getElementById('package-pie-chart').getContext('2d');
                 const packagesListName = [
                     `${this.$ctrl.pagesData.length} Pages`,
@@ -38,7 +40,7 @@ export const PackagesSearchBoxComponent = {
                     "#c45850"
                 ];
                 let myChart = new Chart(ctx, this.chartService.returnChartObject(packagesListName, packagesListSize, 'pie', bgColor));
-
+                this.scope.$apply();
             }
     }]
 };

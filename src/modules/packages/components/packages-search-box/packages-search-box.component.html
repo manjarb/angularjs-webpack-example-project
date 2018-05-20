@@ -3,9 +3,11 @@
            type="text"
            placeholder="Search Package Name"
            ng-model="package.packageName"
-           ng-init="package.packageName = ''">
+           ng-init="package.packageName = ''"
+           ng-change="$scope.isChartTrigger = false"/>
+    <pre>{{ $scope.isChartTrigger  }}</pre>
     <ul class="list-group"
-        ng-if="package.packageName !== '' && package.packageName !== null">
+        ng-if="package.packageName !== '' && package.packageName !== null && !$scope.isChartTrigger">
         <li class="list-group-item"
             ng-repeat="page in $ctrl.pagesData | filter:package"
             ng-click="renderPieChart(page)">
