@@ -3,7 +3,7 @@ export default class PackagesService {
         this.httpService = $http;
     }
 
-    getPackagesList() {
-        return this.httpService.get('assets/data/by-page.json');
+    async getPackagesList() {
+        return await this.httpService.get('assets/data/by-page.json');
     }
 }

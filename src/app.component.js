@@ -4,18 +4,26 @@ export const AppComponent = {
     template: require('./app.component.html'),
     controller: [
         'PackagesService',
+        '$scope',
         class AppController {
-            constructor (PackagesService) {
+            constructor (PackagesService, $scope) {
+                this.scope = $scope;
+                this.scope.mergedPackageNameArray = [];
                 this.packagesSevices = PackagesService;
             }
 
             $onInit() {
-               this.packagesData = this.getDataPackageList();
+                this.getDataPackageList();
             }
 
             async getDataPackageList() {
                 const packages = await this.packagesSevices.getPackagesList();
-                return packages.data;
+                this.scope.pagesPackageData = packages.data;
+                this.scope.$apply();
+                /*this.packagesData.map((dep) => {
+                    this.mergedDepArray = this.mergedDepArray.concat(dep.dependencies);
+                });
+                console.log(this.mergedDepArray, 'mergedDepArray');*/
             }
     }]
 };
