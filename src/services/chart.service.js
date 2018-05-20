@@ -2,7 +2,7 @@ export default class ChartService {
     constructor() {
     }
 
-    returnBubbleChartObject(labels, data, type = 'bar') {
+    returnChartObject(labels, data, type = 'bar', bgColor = 'rgb(255, 99, 132)', options = {}) {
         const chartObject = {
             // The type of chart we want to create
             type: type,
@@ -12,15 +12,14 @@ export default class ChartService {
                 labels,
                 datasets: [{
                     label: "Usage",
-                    backgroundColor: 'rgb(255, 99, 132)',
-                    borderColor: 'rgb(255, 99, 132)',
+                    backgroundColor: bgColor,
+                    borderColor: '#fff',
                     data,
                 }]
             },
 
             // Configuration options go here
-            options: {
-            }
+            options
         };
 
         return chartObject;

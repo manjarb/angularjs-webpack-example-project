@@ -3,6 +3,7 @@ import Chart from 'chart.js';
 import _ from 'lodash';
 
 export const AppComponent = {
+    scope: {},
     template: require('./app.component.html'),
     controller: [
         'PackagesService',
@@ -49,8 +50,7 @@ export const AppComponent = {
                 this.scope.adjustPackageResult = results;
 
                 const ctx = document.getElementById('packages-bar-chart').getContext('2d');
-                ctx.height = 3000;
-                let myChart = new Chart(ctx, this.chartService.returnBubbleChartObject(packagesListName, packagesListSize, 'horizontalBar'));
+                let myChart = new Chart(ctx, this.chartService.returnChartObject(packagesListName, packagesListSize, 'horizontalBar'));
 
                 this.scope.$apply();
             }

@@ -1,8 +1,8 @@
 import angular from 'angular';
 import packagesListGroupModule from './components/packages-list-group/packages-list-group.component';
-import packagesSearchBox from './components/packages-search-box/packages-search-box.component'
+import packagesSearchBoxModule from './components/packages-search-box/packages-search-box.component'
 
 export default angular.module('packages', [
     packagesListGroupModule.name,
-    packagesSearchBox.name
+    packagesSearchBoxModule.name
 ]);

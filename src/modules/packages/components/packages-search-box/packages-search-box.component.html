@@ -7,9 +7,13 @@
     <ul class="list-group"
         ng-if="package.packageName !== '' && package.packageName !== null">
         <li class="list-group-item"
-            ng-repeat="page in $ctrl.pagesData | filter:package">
+            ng-repeat="page in $ctrl.pagesData | filter:package"
+            ng-click="renderPieChart(page)">
             {{ page.packageName }}
         </li>
     </ul>
+</div>
+<div class="package-pie-chart-box">
+    <canvas id="package-pie-chart"></canvas>
 </div>
 
