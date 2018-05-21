@@ -1,6 +1,6 @@
 <ul class="list-group">
     <li class="list-group-item"
         ng-repeat="page in $ctrl.pagesData">
-        {{ page.page }} <span class="float-right">Packages: {{ page.dependencies.length }}</span>
+        {{ page.properties ? returnPageTitle(page.properties.property) : page.page }} <span class="float-right">Packages: {{ page.dependencies.length }}</span>
     </li>
 </ul>

@@ -6,4 +6,8 @@ export default class PackagesService {
     async getPackagesList() {
         return await this.httpService.get('assets/data/by-page.json');
     }
+
+    async getPagesName() {
+        return await this.httpService.get('assets/data/pages-name.json');
+    }
 }

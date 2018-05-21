@@ -20,10 +20,10 @@ export const PackagesSearchBoxComponent = {
                 this.$ctrl.selectedPackageName = '';
                 this.scope.renderPieChart = this.renderPieChart.bind(this);
             }
+            
             $onInit() {
-                /// console.log(this.$ctrl, '$ctrl');
-                // console.log(this.$ctrl['pagesData'], 'pagesData');
             }
+
             renderPieChart(pack) {
                 this.scope.package.packageName = '';
                 this.$ctrl.selectedPackageName = pack.packageName;

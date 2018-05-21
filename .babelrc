@@ -2,6 +2,7 @@
   "presets": ["es2015"],
   "plugins": [
     "transform-regenerator",
-    "babel-plugin-syntax-async-functions"
+    "babel-plugin-syntax-async-functions",
+    "transform-object-rest-spread"
   ]
 }

@@ -1,0 +1,1487 @@
+{
+  "pages": {
+    "-totalSize": "-1",
+    "page": [
+      {
+        "type": "page",
+        "name": "page_1525676197906",
+        "contextItemName": "retail-banking-demo",
+        "parentItemName": "retail-banking-demo",
+        "extendedItemName": "page_1490602096516",
+        "createdBy": "admin",
+        "createdTimestamp": "2018-05-06T23:56:37.915-07:00",
+        "lastModifiedBy": "admin",
+        "lastModifiedTimestamp": "2018-05-08T06:57:36.876-07:00",
+        "securityProfile": "ADMIN",
+        "hidden": "false",
+        "lastModifiedItem": {
+          "name": "page_1525676197906",
+          "createdBy": "admin",
+          "createdTimestamp": "2018-05-06T23:56:37.915-07:00",
+          "lastModifiedBy": "admin",
+          "lastModifiedTimestamp": "2018-05-08T06:57:36.876-07:00"
+        },
+        "publishState": "NOT_PUBLISHED",
+        "uuid": "c060dae8-d717-4fd5-9e61-45f44f49a8e7",
+        "lockState": "UNLOCKED",
+        "properties": {
+          "property": [
+            {
+              "-itemName": "page_1525676197906",
+              "-label": "Theme name",
+              "-manageable": "true",
+              "-name": "themeName",
+              "-readonly": "false",
+              "-viewHint": "designModeOnly,manager",
+              "value": {
+                "-type": "string",
+                "#text": "theme-bb-whitelabel"
+              }
+            },
+            {
+              "-itemName": "page-retail-banking-base",
+              "-manageable": "true",
+              "-name": "Description",
+              "-readonly": "false",
+              "value": { "-type": "String" }
+            },
+            {
+              "-itemName": "page_1525676197906",
+              "-manageable": "true",
+              "-name": "TemplateName",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "RetailDemoTemplate"
+              }
+            },
+            {
+              "-itemName": "page_1525676197906",
+              "-manageable": "true",
+              "-name": "title",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "ATM"
+              }
+            },
+            {
+              "-itemName": "page-retail-banking-base",
+              "-label": "Version",
+              "-manageable": "true",
+              "-name": "version",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "2.0.0"
+              }
+            },
+            {
+              "-itemName": "page_1525676197906",
+              "-label": "Client Template",
+              "-manageable": "true",
+              "-name": "client-template",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "page"
+              }
+            },
+            {
+              "-itemName": "page_1490602096516",
+              "-manageable": "true",
+              "-name": "enableSEO",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "false"
+              }
+            },
+            {
+              "-itemName": "page_1525676197906",
+              "-manageable": "true",
+              "-name": "createdBy",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "admin"
+              }
+            },
+            {
+              "-itemName": "page_1525676197906",
+              "-manageable": "true",
+              "-name": "behaviors",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "be.perspective.Manager be.portalClientExt.PortalManagerPreferencesForm"
+              }
+            },
+            {
+              "-itemName": "page_1525676197906",
+              "-manageable": "true",
+              "-name": "bundleName",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "dashboard"
+              }
+            },
+            {
+              "-itemName": "page_1525676197906",
+              "-manageable": "true",
+              "-name": "modifiedBy",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "admin"
+              }
+            },
+            {
+              "-itemName": "page_1525676197906",
+              "-manageable": "true",
+              "-name": "order",
+              "-readonly": "false",
+              "value": {
+                "-type": "double",
+                "#text": "505.0"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "page",
+        "name": "page_1490602165290",
+        "contextItemName": "retail-banking-demo",
+        "parentItemName": "retail-banking-demo",
+        "extendedItemName": "page_1490602096516",
+        "createdBy": "sys2sys",
+        "createdTimestamp": "2018-05-06T23:12:22.557-07:00",
+        "lastModifiedBy": "admin",
+        "lastModifiedTimestamp": "2018-05-08T07:02:29.366-07:00",
+        "securityProfile": "ADMIN",
+        "hidden": "false",
+        "lastModifiedItem": {
+          "name": "page_1490602165290",
+          "createdBy": "sys2sys",
+          "createdTimestamp": "2018-05-06T23:12:22.557-07:00",
+          "lastModifiedBy": "admin",
+          "lastModifiedTimestamp": "2018-05-08T07:02:29.366-07:00"
+        },
+        "publishState": "NOT_PUBLISHED",
+        "uuid": "95f85851-5f89-4afc-affd-65f7bb3b8c89",
+        "lockState": "UNLOCKED",
+        "properties": {
+          "property": [
+            {
+              "-itemName": "page_1490602165290",
+              "-label": "Theme name",
+              "-manageable": "true",
+              "-name": "themeName",
+              "-readonly": "false",
+              "-viewHint": "designModeOnly,manager",
+              "value": {
+                "-type": "string",
+                "#text": "theme-bb-whitelabel"
+              }
+            },
+            {
+              "-itemName": "page-retail-banking-base",
+              "-manageable": "true",
+              "-name": "Description",
+              "-readonly": "false",
+              "value": { "-type": "String" }
+            },
+            {
+              "-itemName": "page_1490602165290",
+              "-manageable": "true",
+              "-name": "TemplateName",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "RetailDemoTemplate"
+              }
+            },
+            {
+              "-itemName": "page_1490602165290",
+              "-manageable": "true",
+              "-name": "title",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "My Products"
+              }
+            },
+            {
+              "-itemName": "page-retail-banking-base",
+              "-label": "Version",
+              "-manageable": "true",
+              "-name": "version",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "2.0.0"
+              }
+            },
+            {
+              "-itemName": "page_1490602165290",
+              "-label": "Client Template",
+              "-manageable": "true",
+              "-name": "client-template",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "page"
+              }
+            },
+            {
+              "-itemName": "page_1490602096516",
+              "-manageable": "true",
+              "-name": "enableSEO",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "false"
+              }
+            },
+            {
+              "-itemName": "page_1490602165290",
+              "-manageable": "true",
+              "-name": "createdBy",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "admin"
+              }
+            },
+            {
+              "-itemName": "page_1490602165290",
+              "-manageable": "true",
+              "-name": "behaviors",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "be.perspective.Manager be.portalClientExt.PortalManagerPreferencesForm"
+              }
+            },
+            {
+              "-itemName": "page_1490602165290",
+              "-manageable": "true",
+              "-name": "bundleName",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "dashboard"
+              }
+            },
+            {
+              "-itemName": "page_1490602165290",
+              "-manageable": "true",
+              "-name": "modifiedBy",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "admin"
+              }
+            },
+            {
+              "-itemName": "page_1490602165290",
+              "-manageable": "true",
+              "-name": "order",
+              "-readonly": "false",
+              "value": {
+                "-type": "double",
+                "#text": "505.0"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "page",
+        "name": "page_1490602184548",
+        "contextItemName": "retail-banking-demo",
+        "parentItemName": "retail-banking-demo",
+        "extendedItemName": "page_1490602096516",
+        "createdBy": "sys2sys",
+        "createdTimestamp": "2018-05-06T23:12:22.832-07:00",
+        "lastModifiedBy": "sys2sys",
+        "lastModifiedTimestamp": "2018-05-06T23:12:29.232-07:00",
+        "securityProfile": "ADMIN",
+        "hidden": "false",
+        "lastModifiedItem": {
+          "name": "page_1490602184548",
+          "createdBy": "sys2sys",
+          "createdTimestamp": "2018-05-06T23:12:22.832-07:00",
+          "lastModifiedBy": "sys2sys",
+          "lastModifiedTimestamp": "2018-05-06T23:12:29.232-07:00"
+        },
+        "publishState": "NOT_PUBLISHED",
+        "uuid": "99883988-f06a-4453-aff2-eff1121dc6b3",
+        "lockState": "UNLOCKED",
+        "properties": {
+          "property": [
+            {
+              "-itemName": "page_1490602096516",
+              "-label": "Theme name",
+              "-manageable": "true",
+              "-name": "themeName",
+              "-readonly": "false",
+              "-viewHint": "designModeOnly,manager",
+              "value": {
+                "-type": "string",
+                "#text": "theme-bb-whitelabel"
+              }
+            },
+            {
+              "-itemName": "page-retail-banking-base",
+              "-manageable": "true",
+              "-name": "Description",
+              "-readonly": "false",
+              "value": { "-type": "String" }
+            },
+            {
+              "-itemName": "page_1490602184548",
+              "-manageable": "true",
+              "-name": "TemplateName",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "RetailDemoTemplate"
+              }
+            },
+            {
+              "-itemName": "page_1490602184548",
+              "-manageable": "true",
+              "-name": "title",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "Payments"
+              }
+            },
+            {
+              "-itemName": "page-retail-banking-base",
+              "-label": "Version",
+              "-manageable": "true",
+              "-name": "version",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "2.0.0"
+              }
+            },
+            {
+              "-itemName": "page_1490602184548",
+              "-label": "Client Template",
+              "-manageable": "true",
+              "-name": "client-template",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "page"
+              }
+            },
+            {
+              "-itemName": "page_1490602096516",
+              "-manageable": "true",
+              "-name": "enableSEO",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "false"
+              }
+            },
+            {
+              "-itemName": "page_1490602184548",
+              "-manageable": "true",
+              "-name": "createdBy",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "admin"
+              }
+            },
+            {
+              "-itemName": "page_1490602184548",
+              "-manageable": "true",
+              "-name": "behaviors",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "be.perspective.Manager be.portalClientExt.PortalManagerPreferencesForm"
+              }
+            },
+            {
+              "-itemName": "page_1490602184548",
+              "-manageable": "true",
+              "-name": "bundleName",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "dashboard"
+              }
+            },
+            {
+              "-itemName": "page_1490602096516",
+              "-manageable": "true",
+              "-name": "modifiedBy",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "admin"
+              }
+            },
+            {
+              "-itemName": "page_1490602184548",
+              "-manageable": "true",
+              "-name": "order",
+              "-readonly": "false",
+              "value": {
+                "-type": "double",
+                "#text": "752.5"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "page",
+        "name": "page_1513344360860",
+        "contextItemName": "retail-banking-demo",
+        "parentItemName": "retail-banking-demo",
+        "extendedItemName": "page_1490602096516",
+        "createdBy": "sys2sys",
+        "createdTimestamp": "2018-05-06T23:12:22.653-07:00",
+        "lastModifiedBy": "sys2sys",
+        "lastModifiedTimestamp": "2018-05-06T23:12:28.679-07:00",
+        "securityProfile": "ADMIN",
+        "hidden": "false",
+        "lastModifiedItem": {
+          "name": "page_1513344360860",
+          "createdBy": "sys2sys",
+          "createdTimestamp": "2018-05-06T23:12:22.653-07:00",
+          "lastModifiedBy": "sys2sys",
+          "lastModifiedTimestamp": "2018-05-06T23:12:28.679-07:00"
+        },
+        "publishState": "NOT_PUBLISHED",
+        "uuid": "d5b6d6d9-06e0-4514-9003-537c91400b5c",
+        "lockState": "UNLOCKED",
+        "properties": {
+          "property": [
+            {
+              "-itemName": "page_1490602096516",
+              "-label": "Theme name",
+              "-manageable": "true",
+              "-name": "themeName",
+              "-readonly": "false",
+              "-viewHint": "designModeOnly,manager",
+              "value": {
+                "-type": "string",
+                "#text": "theme-bb-whitelabel"
+              }
+            },
+            {
+              "-itemName": "page-retail-banking-base",
+              "-manageable": "true",
+              "-name": "Description",
+              "-readonly": "false",
+              "value": { "-type": "String" }
+            },
+            {
+              "-itemName": "page_1513344360860",
+              "-manageable": "true",
+              "-name": "TemplateName",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "RetailDemoTemplate"
+              }
+            },
+            {
+              "-itemName": "page_1513344360860",
+              "-manageable": "true",
+              "-name": "title",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "Upcoming Payments"
+              }
+            },
+            {
+              "-itemName": "page-retail-banking-base",
+              "-label": "Version",
+              "-manageable": "true",
+              "-name": "version",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "2.0.0"
+              }
+            },
+            {
+              "-itemName": "page_1513344360860",
+              "-label": "Client Template",
+              "-manageable": "true",
+              "-name": "client-template",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "page"
+              }
+            },
+            {
+              "-itemName": "page_1490602096516",
+              "-manageable": "true",
+              "-name": "enableSEO",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "false"
+              }
+            },
+            {
+              "-itemName": "page_1513344360860",
+              "-manageable": "true",
+              "-name": "createdBy",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "admin"
+              }
+            },
+            {
+              "-itemName": "page_1513344360860",
+              "-manageable": "true",
+              "-name": "behaviors",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "be.perspective.Manager be.portalClientExt.PortalManagerPreferencesForm"
+              }
+            },
+            {
+              "-itemName": "page_1513344360860",
+              "-manageable": "true",
+              "-name": "bundleName",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "dashboard"
+              }
+            },
+            {
+              "-itemName": "page_1490602096516",
+              "-manageable": "true",
+              "-name": "modifiedBy",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "admin"
+              }
+            },
+            {
+              "-itemName": "page_1513344360860",
+              "-manageable": "true",
+              "-name": "order",
+              "-readonly": "false",
+              "value": {
+                "-type": "double",
+                "#text": "775.703125"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "page",
+        "name": "page_1508759355392",
+        "contextItemName": "retail-banking-demo",
+        "parentItemName": "retail-banking-demo",
+        "extendedItemName": "page_1490602096516",
+        "createdBy": "sys2sys",
+        "createdTimestamp": "2018-05-06T23:12:22.883-07:00",
+        "lastModifiedBy": "sys2sys",
+        "lastModifiedTimestamp": "2018-05-06T23:12:29.328-07:00",
+        "securityProfile": "ADMIN",
+        "hidden": "false",
+        "lastModifiedItem": {
+          "name": "page_1508759355392",
+          "createdBy": "sys2sys",
+          "createdTimestamp": "2018-05-06T23:12:22.883-07:00",
+          "lastModifiedBy": "sys2sys",
+          "lastModifiedTimestamp": "2018-05-06T23:12:29.328-07:00"
+        },
+        "publishState": "NOT_PUBLISHED",
+        "uuid": "c0932156-9b14-4841-ba2a-1eaddde9a865",
+        "lockState": "UNLOCKED",
+        "properties": {
+          "property": [
+            {
+              "-itemName": "page_1490602096516",
+              "-label": "Theme name",
+              "-manageable": "true",
+              "-name": "themeName",
+              "-readonly": "false",
+              "-viewHint": "designModeOnly,manager",
+              "value": {
+                "-type": "string",
+                "#text": "theme-bb-whitelabel"
+              }
+            },
+            {
+              "-itemName": "page-retail-banking-base",
+              "-manageable": "true",
+              "-name": "Description",
+              "-readonly": "false",
+              "value": { "-type": "String" }
+            },
+            {
+              "-itemName": "page_1508759355392",
+              "-manageable": "true",
+              "-name": "TemplateName",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "RetailDemoTemplate"
+              }
+            },
+            {
+              "-itemName": "page_1508759355392",
+              "-manageable": "true",
+              "-name": "title",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "Budgets"
+              }
+            },
+            {
+              "-itemName": "page-retail-banking-base",
+              "-label": "Version",
+              "-manageable": "true",
+              "-name": "version",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "2.0.0"
+              }
+            },
+            {
+              "-itemName": "page_1508759355392",
+              "-label": "Client Template",
+              "-manageable": "true",
+              "-name": "client-template",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "page"
+              }
+            },
+            {
+              "-itemName": "page_1490602096516",
+              "-manageable": "true",
+              "-name": "enableSEO",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "false"
+              }
+            },
+            {
+              "-itemName": "page_1508759355392",
+              "-manageable": "true",
+              "-name": "createdBy",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "admin"
+              }
+            },
+            {
+              "-itemName": "page_1508759355392",
+              "-manageable": "true",
+              "-name": "behaviors",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "be.perspective.Manager be.portalClientExt.PortalManagerPreferencesForm"
+              }
+            },
+            {
+              "-itemName": "page_1508759355392",
+              "-manageable": "true",
+              "-name": "bundleName",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "dashboard"
+              }
+            },
+            {
+              "-itemName": "page_1490602096516",
+              "-manageable": "true",
+              "-name": "modifiedBy",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "admin"
+              }
+            },
+            {
+              "-itemName": "page_1508759355392",
+              "-manageable": "true",
+              "-name": "order",
+              "-readonly": "false",
+              "value": {
+                "-type": "double",
+                "#text": "845.3125"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "page",
+        "name": "page_1490602192660",
+        "contextItemName": "retail-banking-demo",
+        "parentItemName": "retail-banking-demo",
+        "extendedItemName": "page_1490602096516",
+        "createdBy": "sys2sys",
+        "createdTimestamp": "2018-05-06T23:12:22.711-07:00",
+        "lastModifiedBy": "sys2sys",
+        "lastModifiedTimestamp": "2018-05-06T23:12:28.847-07:00",
+        "securityProfile": "ADMIN",
+        "hidden": "false",
+        "lastModifiedItem": {
+          "name": "page_1490602192660",
+          "createdBy": "sys2sys",
+          "createdTimestamp": "2018-05-06T23:12:22.711-07:00",
+          "lastModifiedBy": "sys2sys",
+          "lastModifiedTimestamp": "2018-05-06T23:12:28.847-07:00"
+        },
+        "publishState": "NOT_PUBLISHED",
+        "uuid": "6cc35b1f-bf62-4670-873e-547dd9e3d77e",
+        "lockState": "UNLOCKED",
+        "properties": {
+          "property": [
+            {
+              "-itemName": "page_1490602096516",
+              "-label": "Theme name",
+              "-manageable": "true",
+              "-name": "themeName",
+              "-readonly": "false",
+              "-viewHint": "designModeOnly,manager",
+              "value": {
+                "-type": "string",
+                "#text": "theme-bb-whitelabel"
+              }
+            },
+            {
+              "-itemName": "page-retail-banking-base",
+              "-manageable": "true",
+              "-name": "Description",
+              "-readonly": "false",
+              "value": { "-type": "String" }
+            },
+            {
+              "-itemName": "page_1490602192660",
+              "-manageable": "true",
+              "-name": "TemplateName",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "RetailDemoTemplate"
+              }
+            },
+            {
+              "-itemName": "page_1490602192660",
+              "-manageable": "true",
+              "-name": "title",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "Contacts"
+              }
+            },
+            {
+              "-itemName": "page-retail-banking-base",
+              "-label": "Version",
+              "-manageable": "true",
+              "-name": "version",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "2.0.0"
+              }
+            },
+            {
+              "-itemName": "page_1490602192660",
+              "-label": "Client Template",
+              "-manageable": "true",
+              "-name": "client-template",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "page"
+              }
+            },
+            {
+              "-itemName": "page_1490602096516",
+              "-manageable": "true",
+              "-name": "enableSEO",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "false"
+              }
+            },
+            {
+              "-itemName": "page_1490602192660",
+              "-manageable": "true",
+              "-name": "createdBy",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "admin"
+              }
+            },
+            {
+              "-itemName": "page_1490602192660",
+              "-manageable": "true",
+              "-name": "behaviors",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "be.perspective.Manager be.portalClientExt.PortalManagerPreferencesForm"
+              }
+            },
+            {
+              "-itemName": "page_1490602192660",
+              "-manageable": "true",
+              "-name": "bundleName",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "dashboard"
+              }
+            },
+            {
+              "-itemName": "page_1490602096516",
+              "-manageable": "true",
+              "-name": "modifiedBy",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "admin"
+              }
+            },
+            {
+              "-itemName": "page_1490602192660",
+              "-manageable": "true",
+              "-name": "order",
+              "-readonly": "false",
+              "value": {
+                "-type": "double",
+                "#text": "876.25"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "page",
+        "name": "page_1520791856438",
+        "contextItemName": "retail-banking-demo",
+        "parentItemName": "retail-banking-demo",
+        "extendedItemName": "page_1490602096516",
+        "createdBy": "sys2sys",
+        "createdTimestamp": "2018-05-06T23:12:22.915-07:00",
+        "lastModifiedBy": "sys2sys",
+        "lastModifiedTimestamp": "2018-05-06T23:12:24.382-07:00",
+        "securityProfile": "ADMIN",
+        "hidden": "false",
+        "lastModifiedItem": {
+          "name": "page_1520791856438",
+          "createdBy": "sys2sys",
+          "createdTimestamp": "2018-05-06T23:12:22.915-07:00",
+          "lastModifiedBy": "sys2sys",
+          "lastModifiedTimestamp": "2018-05-06T23:12:24.382-07:00"
+        },
+        "publishState": "NOT_PUBLISHED",
+        "uuid": "5e7471a6-9301-4e29-b0b9-aed8602367a7",
+        "lockState": "UNLOCKED",
+        "properties": {
+          "property": [
+            {
+              "-itemName": "page_1490602096516",
+              "-label": "Theme name",
+              "-manageable": "true",
+              "-name": "themeName",
+              "-readonly": "false",
+              "-viewHint": "designModeOnly,manager",
+              "value": {
+                "-type": "string",
+                "#text": "theme-bb-whitelabel"
+              }
+            },
+            {
+              "-itemName": "page-retail-banking-base",
+              "-manageable": "true",
+              "-name": "Description",
+              "-readonly": "false",
+              "value": { "-type": "String" }
+            },
+            {
+              "-itemName": "page_1520791856438",
+              "-manageable": "true",
+              "-name": "TemplateName",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "RetailDemoTemplate"
+              }
+            },
+            {
+              "-itemName": "page_1520791856438",
+              "-manageable": "true",
+              "-name": "title",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "Account Statements"
+              }
+            },
+            {
+              "-itemName": "page-retail-banking-base",
+              "-label": "Version",
+              "-manageable": "true",
+              "-name": "version",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "2.0.0"
+              }
+            },
+            {
+              "-itemName": "page_1520791856438",
+              "-label": "Client Template",
+              "-manageable": "true",
+              "-name": "client-template",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "page"
+              }
+            },
+            {
+              "-itemName": "page_1490602096516",
+              "-manageable": "true",
+              "-name": "enableSEO",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "false"
+              }
+            },
+            {
+              "-itemName": "page_1520791856438",
+              "-manageable": "true",
+              "-name": "createdBy",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "admin"
+              }
+            },
+            {
+              "-itemName": "page_1520791856438",
+              "-manageable": "true",
+              "-name": "behaviors",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "be.perspective.Manager be.portalClientExt.PortalManagerPreferencesForm"
+              }
+            },
+            {
+              "-itemName": "page_1520791856438",
+              "-manageable": "true",
+              "-name": "bundleName",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "dashboard"
+              }
+            },
+            {
+              "-itemName": "page_1490602096516",
+              "-manageable": "true",
+              "-name": "modifiedBy",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "admin"
+              }
+            },
+            {
+              "-itemName": "page_1520791856438",
+              "-manageable": "true",
+              "-name": "order",
+              "-readonly": "false",
+              "value": {
+                "-type": "double",
+                "#text": "903.3203125"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "page",
+        "name": "page_1490602210626",
+        "contextItemName": "retail-banking-demo",
+        "parentItemName": "retail-banking-demo",
+        "extendedItemName": "page_1490602096516",
+        "createdBy": "sys2sys",
+        "createdTimestamp": "2018-05-06T23:12:22.963-07:00",
+        "lastModifiedBy": "sys2sys",
+        "lastModifiedTimestamp": "2018-05-06T23:12:29.451-07:00",
+        "securityProfile": "ADMIN",
+        "hidden": "false",
+        "lastModifiedItem": {
+          "name": "page_1490602210626",
+          "createdBy": "sys2sys",
+          "createdTimestamp": "2018-05-06T23:12:22.963-07:00",
+          "lastModifiedBy": "sys2sys",
+          "lastModifiedTimestamp": "2018-05-06T23:12:29.451-07:00"
+        },
+        "publishState": "NOT_PUBLISHED",
+        "uuid": "bcb10264-6af7-426c-bbb4-f7a6284f31bc",
+        "lockState": "UNLOCKED",
+        "properties": {
+          "property": [
+            {
+              "-itemName": "page_1490602096516",
+              "-label": "Theme name",
+              "-manageable": "true",
+              "-name": "themeName",
+              "-readonly": "false",
+              "-viewHint": "designModeOnly,manager",
+              "value": {
+                "-type": "string",
+                "#text": "theme-bb-whitelabel"
+              }
+            },
+            {
+              "-itemName": "page-retail-banking-base",
+              "-manageable": "true",
+              "-name": "Description",
+              "-readonly": "false",
+              "value": { "-type": "String" }
+            },
+            {
+              "-itemName": "page_1490602210626",
+              "-manageable": "true",
+              "-name": "TemplateName",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "RetailDemoTemplate"
+              }
+            },
+            {
+              "-itemName": "page_1490602210626",
+              "-manageable": "true",
+              "-name": "title",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "Places"
+              }
+            },
+            {
+              "-itemName": "page-retail-banking-base",
+              "-label": "Version",
+              "-manageable": "true",
+              "-name": "version",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "2.0.0"
+              }
+            },
+            {
+              "-itemName": "page_1490602210626",
+              "-label": "Client Template",
+              "-manageable": "true",
+              "-name": "client-template",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "page"
+              }
+            },
+            {
+              "-itemName": "page_1490602096516",
+              "-manageable": "true",
+              "-name": "enableSEO",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "false"
+              }
+            },
+            {
+              "-itemName": "page_1490602210626",
+              "-manageable": "true",
+              "-name": "createdBy",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "admin"
+              }
+            },
+            {
+              "-itemName": "page_1490602210626",
+              "-manageable": "true",
+              "-name": "behaviors",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "be.perspective.Manager be.portalClientExt.PortalManagerPreferencesForm"
+              }
+            },
+            {
+              "-itemName": "page_1490602210626",
+              "-manageable": "true",
+              "-name": "bundleName",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "dashboard"
+              }
+            },
+            {
+              "-itemName": "page_1490602096516",
+              "-manageable": "true",
+              "-name": "modifiedBy",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "admin"
+              }
+            },
+            {
+              "-itemName": "page_1490602210626",
+              "-manageable": "true",
+              "-name": "order",
+              "-readonly": "false",
+              "value": {
+                "-type": "double",
+                "#text": "938.125"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "page",
+        "name": "page_1490602218224",
+        "contextItemName": "retail-banking-demo",
+        "parentItemName": "retail-banking-demo",
+        "extendedItemName": "page_1490602096516",
+        "createdBy": "sys2sys",
+        "createdTimestamp": "2018-05-06T23:12:22.758-07:00",
+        "lastModifiedBy": "sys2sys",
+        "lastModifiedTimestamp": "2018-05-06T23:12:29.098-07:00",
+        "securityProfile": "ADMIN",
+        "hidden": "false",
+        "lastModifiedItem": {
+          "name": "page_1490602218224",
+          "createdBy": "sys2sys",
+          "createdTimestamp": "2018-05-06T23:12:22.758-07:00",
+          "lastModifiedBy": "sys2sys",
+          "lastModifiedTimestamp": "2018-05-06T23:12:29.098-07:00"
+        },
+        "publishState": "NOT_PUBLISHED",
+        "uuid": "0d48a2e2-090e-4d0e-93e7-9d9f33a7196e",
+        "lockState": "UNLOCKED",
+        "properties": {
+          "property": [
+            {
+              "-itemName": "page_1490602096516",
+              "-label": "Theme name",
+              "-manageable": "true",
+              "-name": "themeName",
+              "-readonly": "false",
+              "-viewHint": "designModeOnly,manager",
+              "value": {
+                "-type": "string",
+                "#text": "theme-bb-whitelabel"
+              }
+            },
+            {
+              "-itemName": "page-retail-banking-base",
+              "-manageable": "true",
+              "-name": "Description",
+              "-readonly": "false",
+              "value": { "-type": "String" }
+            },
+            {
+              "-itemName": "page_1490602218224",
+              "-manageable": "true",
+              "-name": "TemplateName",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "RetailDemoTemplate"
+              }
+            },
+            {
+              "-itemName": "page_1490602218224",
+              "-manageable": "true",
+              "-name": "title",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "Actions"
+              }
+            },
+            {
+              "-itemName": "page-retail-banking-base",
+              "-label": "Version",
+              "-manageable": "true",
+              "-name": "version",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "2.0.0"
+              }
+            },
+            {
+              "-itemName": "page_1490602218224",
+              "-label": "Client Template",
+              "-manageable": "true",
+              "-name": "client-template",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "page"
+              }
+            },
+            {
+              "-itemName": "page_1490602096516",
+              "-manageable": "true",
+              "-name": "enableSEO",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "false"
+              }
+            },
+            {
+              "-itemName": "page_1490602218224",
+              "-manageable": "true",
+              "-name": "createdBy",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "admin"
+              }
+            },
+            {
+              "-itemName": "page_1490602218224",
+              "-manageable": "true",
+              "-name": "behaviors",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "be.perspective.Manager be.portalClientExt.PortalManagerPreferencesForm"
+              }
+            },
+            {
+              "-itemName": "page_1490602218224",
+              "-manageable": "true",
+              "-name": "bundleName",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "dashboard"
+              }
+            },
+            {
+              "-itemName": "page_1490602096516",
+              "-manageable": "true",
+              "-name": "modifiedBy",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "admin"
+              }
+            },
+            {
+              "-itemName": "page_1490602218224",
+              "-manageable": "true",
+              "-name": "order",
+              "-readonly": "false",
+              "value": {
+                "-type": "double",
+                "#text": "969.0625"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "page",
+        "name": "page_1490602238060",
+        "contextItemName": "retail-banking-demo",
+        "parentItemName": "retail-banking-demo",
+        "extendedItemName": "page_1490602096516",
+        "createdBy": "sys2sys",
+        "createdTimestamp": "2018-05-06T23:12:22.470-07:00",
+        "lastModifiedBy": "sys2sys",
+        "lastModifiedTimestamp": "2018-05-06T23:12:28.302-07:00",
+        "securityProfile": "ADMIN",
+        "hidden": "false",
+        "lastModifiedItem": {
+          "name": "page_1490602238060",
+          "createdBy": "sys2sys",
+          "createdTimestamp": "2018-05-06T23:12:22.470-07:00",
+          "lastModifiedBy": "sys2sys",
+          "lastModifiedTimestamp": "2018-05-06T23:12:28.302-07:00"
+        },
+        "publishState": "NOT_PUBLISHED",
+        "uuid": "98b206e9-95e5-4151-86a7-934f3430851d",
+        "lockState": "UNLOCKED",
+        "properties": {
+          "property": [
+            {
+              "-itemName": "page_1490602096516",
+              "-label": "Theme name",
+              "-manageable": "true",
+              "-name": "themeName",
+              "-readonly": "false",
+              "-viewHint": "designModeOnly,manager",
+              "value": {
+                "-type": "string",
+                "#text": "theme-bb-whitelabel"
+              }
+            },
+            {
+              "-itemName": "page-retail-banking-base",
+              "-manageable": "true",
+              "-name": "Description",
+              "-readonly": "false",
+              "value": { "-type": "String" }
+            },
+            {
+              "-itemName": "page_1490602238060",
+              "-manageable": "true",
+              "-name": "TemplateName",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "RetailDemoTemplate"
+              }
+            },
+            {
+              "-itemName": "page_1490602238060",
+              "-manageable": "true",
+              "-name": "title",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "Messages"
+              }
+            },
+            {
+              "-itemName": "page-retail-banking-base",
+              "-label": "Version",
+              "-manageable": "true",
+              "-name": "version",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "2.0.0"
+              }
+            },
+            {
+              "-itemName": "page_1490602238060",
+              "-label": "Client Template",
+              "-manageable": "true",
+              "-name": "client-template",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "page"
+              }
+            },
+            {
+              "-itemName": "page_1490602096516",
+              "-manageable": "true",
+              "-name": "enableSEO",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "false"
+              }
+            },
+            {
+              "-itemName": "page_1490602238060",
+              "-manageable": "true",
+              "-name": "createdBy",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "admin"
+              }
+            },
+            {
+              "-itemName": "page_1490602238060",
+              "-manageable": "true",
+              "-name": "behaviors",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "be.perspective.Manager be.portalClientExt.PortalManagerPreferencesForm"
+              }
+            },
+            {
+              "-itemName": "page_1490602238060",
+              "-manageable": "true",
+              "-name": "bundleName",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "dashboard"
+              }
+            },
+            {
+              "-itemName": "page_1490602096516",
+              "-manageable": "true",
+              "-name": "modifiedBy",
+              "-readonly": "false",
+              "value": {
+                "-type": "string",
+                "#text": "admin"
+              }
+            },
+            {
+              "-itemName": "page_1490602238060",
+              "-manageable": "true",
+              "-name": "order",
+              "-readonly": "false",
+              "value": {
+                "-type": "double",
+                "#text": "984.53125"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
