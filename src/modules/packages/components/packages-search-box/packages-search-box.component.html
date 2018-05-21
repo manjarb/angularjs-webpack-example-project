@@ -1,19 +1,20 @@
 <div class="package-search-box-component">
-    <input class="form-control"
-           type="text"
-           placeholder="Search Package Name"
-           ng-model="package.packageName"
-           ng-init="package.packageName = ''"
-           ng-change="$scope.isChartTrigger = false"/>
-    <pre>{{ $scope.isChartTrigger  }}</pre>
-    <ul class="list-group"
-        ng-if="package.packageName !== '' && package.packageName !== null && !$scope.isChartTrigger">
-        <li class="list-group-item"
-            ng-repeat="page in $ctrl.pagesData | filter:package"
-            ng-click="renderPieChart(page)">
-            {{ page.packageName }}
-        </li>
-    </ul>
+    <div class="search-input-box">
+        <input class="form-control"
+               type="text"
+               placeholder="Search Package Name"
+               ng-model="package.packageName"
+               ng-init="package.packageName = ''"/>
+        <ul class="list-group package-search-list"
+            ng-if="package.packageName !== '' && package.packageName !== null && !$scope.isChartTrigger">
+            <li class="list-group-item"
+                ng-repeat="page in $ctrl.packagesData | filter:package"
+                ng-click="renderPieChart(page)">
+                {{ page.packageName }}
+            </li>
+        </ul>
+    </div>
+    <h3 class="text-center">{{ $ctrl.selectedPackageName }}</h3>
 </div>
 <div class="package-pie-chart-box">
     <canvas id="package-pie-chart"></canvas>

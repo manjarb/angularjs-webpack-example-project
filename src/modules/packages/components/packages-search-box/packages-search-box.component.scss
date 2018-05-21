@@ -1,0 +1,9 @@
+.search-input-box {
+  margin-bottom: 30px;
+  position: relative;
+  .package-search-list {
+    position: absolute;
+    width: 100%;
+    top: 38px;
+  }
+}

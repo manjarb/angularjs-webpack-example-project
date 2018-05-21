@@ -20,7 +20,7 @@
     <section class="package-chart-section">
         <h2 class="homepage-title text-center">Packages Chart</h2>
         <div class="packages-chart-box">
-            <canvas id="packages-bar-chart"></canvas>
+            <canvas id="packages-bar-chart" height="6000"></canvas>
         </div>
     </section>
 </div>
@@ -29,7 +29,8 @@
     <section class="package-search-section">
         <h2 class="homepage-title text-center">Search Package</h2>
         <div class="package-search-box">
-            <packages-search-box pages-data="adjustPackageResult"></packages-search-box>
+            <packages-search-box packages-data="adjustPackageResult"
+                                 pages-data="pagesPackageData"></packages-search-box>
         </div>
     </section>
 </div>

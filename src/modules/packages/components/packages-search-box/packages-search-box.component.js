@@ -1,10 +1,12 @@
 import angular from 'angular';
 import Chart from 'chart.js';
+import './packages-search-box.component.scss';
 
 export const PackagesSearchBoxComponent = {
     scope: {},
     bindings: {
-        pagesData: '<'
+        pagesData: '<',
+        packagesData: '<'
     },
     template: require('./packages-search-box.component.html'),
     controller: [
@@ -15,7 +17,7 @@ export const PackagesSearchBoxComponent = {
                 this.scope = $scope;
                 this.$ctrl = $scope.$ctrl;
                 this.chartService = ChartService;
-                this.scope.isChartTrigger = false;
+                this.$ctrl.selectedPackageName = '';
                 this.scope.renderPieChart = this.renderPieChart.bind(this);
             }
             $onInit() {
@@ -23,24 +25,23 @@ export const PackagesSearchBoxComponent = {
                 // console.log(this.$ctrl['pagesData'], 'pagesData');
             }
             renderPieChart(pack) {
-                this.scope.package.packageName = pack.packageName;
-                this.scope.isChartTrigger = true;
-
+                this.scope.package.packageName = '';
+                this.$ctrl.selectedPackageName = pack.packageName;
                 const ctx = document.getElementById('package-pie-chart').getContext('2d');
                 const packagesListName = [
                     `${this.$ctrl.pagesData.length} Pages`,
                     `${pack.packageName} used ${pack.count} times`
                 ];
+                const packagePercentageUse = this.chartService.calculatePercentage(this.$ctrl.pagesData.length, pack.count);
                 const packagesListSize = [
-                    this.$ctrl.pagesData.length,
-                    pack.count
+                    100 - packagePercentageUse,
+                    packagePercentageUse
                 ];
                 const bgColor = [
                     "#3e95cd",
                     "#c45850"
                 ];
                 let myChart = new Chart(ctx, this.chartService.returnChartObject(packagesListName, packagesListSize, 'pie', bgColor));
-                this.scope.$apply();
             }
     }]
 };

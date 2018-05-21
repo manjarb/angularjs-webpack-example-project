@@ -11,7 +11,7 @@ export default class ChartService {
             data: {
                 labels,
                 datasets: [{
-                    label: "Usage",
+                    label: "Packages Dataset",
                     backgroundColor: bgColor,
                     borderColor: '#fff',
                     data,
@@ -25,5 +25,17 @@ export default class ChartService {
         return chartObject;
     }
 
+    getRandomColor() {
+        const letters = '0123456789ABCDEF'.split('');
+        let color = '#';
+        for (let i = 0; i < 6; i++ ) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    calculatePercentage(amount, value) {
+        return (value * 100) / amount;
+    }
 
 }

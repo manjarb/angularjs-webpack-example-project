@@ -43,14 +43,20 @@ export const AppComponent = {
                     .value();
                 const packagesListName = [];
                 const packagesListSize = [];
+                const packagesColorSet = [];
                 results.map((result) => {
                     packagesListName.push(result.packageName);
                     packagesListSize.push(result.count);
+                    packagesColorSet.push(this.chartService.getRandomColor())
                 });
+                console.log(results, 'results');
                 this.scope.adjustPackageResult = results;
 
+                const chartOptions = {
+                    maintainAspectRatio: false,
+                };
                 const ctx = document.getElementById('packages-bar-chart').getContext('2d');
-                let myChart = new Chart(ctx, this.chartService.returnChartObject(packagesListName, packagesListSize, 'horizontalBar'));
+                let myChart = new Chart(ctx, this.chartService.returnChartObject(packagesListName, packagesListSize, 'horizontalBar', packagesColorSet, chartOptions));
 
                 this.scope.$apply();
             }
