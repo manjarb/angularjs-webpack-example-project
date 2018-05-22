@@ -27,3 +27,10 @@ body {
     height: 450px;
   }
 }
+
+.package-compare-chart-section {
+  display: none;
+  &.show {
+    display: block;
+  }
+}

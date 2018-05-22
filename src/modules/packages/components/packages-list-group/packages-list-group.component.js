@@ -1,6 +1,7 @@
 import angular from 'angular';
 
 export const PackagesListGroupComponent = {
+    scope: {},
     bindings: {
         pagesData: '<'
     },
@@ -17,10 +18,19 @@ export const PackagesListGroupComponent = {
                 this.scope.packageDragStart = this.packageDragStart.bind(this);
                 this.scope.allowDrop = this.allowDrop;
                 this.scope.onPackageDrop = this.onPackageDrop.bind(this);
-
+                this.scope.listPagesData = [];
+                this.setPagesData = this.setPagesData.bind(this);
             }
 
             $onInit() {
+                setTimeout(() => {
+                    this.setPagesData();
+                }, 500);
+            }
+
+            setPagesData() {
+                this.scope.listPagesData = this.$ctrl.pagesData.slice();
+                this.scope.$apply();
             }
 
             allowDrop(e) {
@@ -29,16 +39,16 @@ export const PackagesListGroupComponent = {
 
             packageDragStart(e, page) {
                 e.dataTransfer.setData("currentDragPage", JSON.stringify(page));
-                if (this.packagesSevice.checkIfObjectExistByKey(this.$ctrl.pagesData, 'page', page.page)) {
-                    const currentPagePosition = this.packagesSevice.findArrayPositionWithData(this.$ctrl.pagesData, 'page', page.page);
-                    this.$ctrl.pagesData.splice(currentPagePosition, 1);
+                if (this.packagesSevice.checkIfObjectExistByKey(this.scope.listPagesData, 'page', page.page)) {
+                    const currentPagePosition = this.packagesSevice.findArrayPositionWithData(this.scope.listPagesData, 'page', page.page);
+                    this.scope.listPagesData.splice(currentPagePosition, 1);
                 }
             }
 
             onPackageDrop(e) {
                 const currentDragPage = JSON.parse(e.dataTransfer.getData("currentDragPage"));
-                if (!this.packagesSevice.checkIfObjectExistByKey(this.$ctrl.pagesData, 'page', currentDragPage.page)) {
-                    this.$ctrl.pagesData.push(currentDragPage);
+                if (!this.packagesSevice.checkIfObjectExistByKey(this.scope.listPagesData, 'page', currentDragPage.page)) {
+                    this.scope.listPagesData.push(currentDragPage);
                     this.scope.$apply();
                 }
             }

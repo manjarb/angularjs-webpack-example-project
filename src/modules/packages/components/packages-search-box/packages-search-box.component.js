@@ -24,29 +24,18 @@ export const PackagesSearchBoxComponent = {
             }
             
             $onInit() {
+                console.log(this.$ctrl);
             }
 
             renderPieChart(pack) {
                 this.scope.package.packageName = '';
                 this.$ctrl.selectedPackageName = pack.packageName;
+
+                this.chartService.clearCanvas('package-pie-chart-box');
+                this.chartService.addNewCanvas('package-pie-chart-box', 'package-pie-chart');
+
                 const ctx = document.getElementById('package-pie-chart').getContext('2d');
-                /*const packagesListName = [
-                    `${this.$ctrl.pagesData.length} Pages`,
-                    `${pack.packageName} used ${pack.count} times`
-                ];
-                const packagePercentageUse = this.chartService.calculatePercentage(this.$ctrl.pagesData.length, pack.count);
-                const packagesListSize = [
-                    100 - packagePercentageUse,
-                    packagePercentageUse
-                ];
-                const bgColor = [
-                    "#3e95cd",
-                    "#c45850"
-                ];*/
-
                 const pieChartData = this.chartService.returnPieChartData(this.$ctrl.pagesData, pack);
-                console.log(pieChartData);
-
                 if(this.myChart) {
                     this.myChart.destroy();
                 }

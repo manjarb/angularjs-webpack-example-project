@@ -69,4 +69,18 @@ export default class ChartService {
         }
     }
 
+    clearCanvas(parentId) {
+        const pieBox = document.getElementById(parentId);
+        while (pieBox.firstChild) {
+            pieBox.removeChild(pieBox.firstChild);
+        }
+    }
+
+    addNewCanvas(parentId, childId) {
+        const newCanvas = document.createElement('canvas');
+        newCanvas.setAttribute("id", childId);
+        console.log(parentId, 'parentId');
+        document.getElementById(parentId).appendChild(newCanvas);
+    }
+
 }

@@ -25,6 +25,7 @@
     </section>-->
 
     <section class="package-compare-chart-section"
+             ng-class="{'show': showPackagesCompareChart}"
              id="package-compare-chart-section">
         <h2 class="homepage-title text-center">Packages Compare Chart</h2>
         <div class="packages-compare-chart-container">
@@ -37,7 +38,8 @@
 </div>
 
 <div class="container small">
-    <section class="package-search-section">
+    <section class="package-search-section"
+             id="package-search-section">
         <h2 class="homepage-title text-center">Search Package</h2>
         <div class="package-search-box">
             <packages-search-box packages-data="adjustPackageResult"

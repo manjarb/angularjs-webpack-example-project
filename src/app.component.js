@@ -15,10 +15,12 @@ export const AppComponent = {
                 this.scope.pagesPackageDataLeft = [];
                 this.scope.pagesPackageDataRight = [];
                 this.scope.adjustPackageResult = [];
+                this.scope.showPackagesCompareChart = false;
                 this.packagesSevices = PackagesService;
                 this.chartService = ChartService;
 
                 this.scope.initComparePackagesChart = this.initComparePackagesChart.bind(this);
+                this.updateSelectPackagePieChart = this.updateSelectPackagePieChart.bind(this);
                 this.myChart = null;
                 this.pieChart = null;
             }
@@ -54,22 +56,7 @@ export const AppComponent = {
                     .groupBy('packageName')
                     .map((items, packageName) => ({ packageName, count: items.length }))
                     .value();
-                const packagesListName = [];
-                const packagesListSize = [];
-                const packagesColorSet = [];
-                results.map((result) => {
-                    packagesListName.push(result.packageName);
-                    packagesListSize.push(result.count);
-                    packagesColorSet.push(this.chartService.getRandomColor())
-                });
                 this.scope.adjustPackageResult = results;
-
-                const chartOptions = {
-                    maintainAspectRatio: false,
-                };
-                // const ctx = document.getElementById('packages-bar-chart').getContext('2d');
-                // let myChart = new Chart(ctx, this.chartService.returnChartObject(packagesListName, packagesListSize, 'horizontalBar', packagesColorSet, chartOptions));
-
                 this.scope.$apply();
             }
 
@@ -110,28 +97,42 @@ export const AppComponent = {
                 }
 
                 this.myChart = new Chart(ctx, this.chartService.returnChartObject(packagesListName, packagesListSize, 'bar', packagesColorSet, chartOptions));
-                const ctxContainer = document.getElementById('package-compare-chart-section');
-                window.scroll(0, this.chartService.findElementPosition(ctxContainer) + (-60));
+
+                this.scope.showPackagesCompareChart = true;
+                setTimeout(() => {
+                    const ctxContainer = document.getElementById('package-compare-chart-section');
+                    window.scroll(0, this.chartService.findElementPosition(ctxContainer) + (-60));
+                }, 150);
 
                 document.getElementById('packages-compare-bar-chart').onclick = (evt) =>{
+                    console.log(this.myChart.getElementsAtEvent(evt), "yoyoy");
                     const activePoints = this.myChart.getElementsAtEvent(evt);
-                    const firstPoint = activePoints[0];
-                    const label = this.myChart.data.labels[firstPoint._index];
-                    const value = this.myChart.data.datasets[firstPoint._datasetIndex].data[firstPoint._index];
-                    // alert(label + ": " + value);
-                    // 
-                    this.updateSelectPackagePieChart(label, value);
+                    if (activePoints.length > 0) {
+                        const firstPoint = activePoints[0];
+                        const label = this.myChart.data.labels[firstPoint._index];
+                        const value = this.myChart.data.datasets[firstPoint._datasetIndex].data[firstPoint._index];
+                        this.updateSelectPackagePieChart(label, value);
+                    }
                 };
             }
 
             updateSelectPackagePieChart(label, value) {
+                this.chartService.clearCanvas('package-pie-chart-box');
+                this.chartService.addNewCanvas('package-pie-chart-box', 'package-pie-chart');
                 const ctx = document.getElementById('package-pie-chart').getContext('2d');
 
                 if(this.pieChart) {
                     this.pieChart.destroy();
                 }
-                this.pieChart = new Chart(ctx, this.chartService.returnChartObject(packagesListName, packagesListSize, 'pie', bgColor));
+                if(this.packagesSevices.checkIfObjectExistByKey(this.scope.adjustPackageResult, 'packageName', label)) {
+                    const packagesPosition = this.packagesSevices.findArrayPositionWithData(this.scope.adjustPackageResult, 'packageName', label);
+                    const selectedPackageData = this.scope.adjustPackageResult[packagesPosition];
+                    const pieChartData = this.chartService.returnPieChartData(this.scope.pagesPackageData, selectedPackageData);
+                    this.pieChart = new Chart(ctx, this.chartService.returnChartObject(pieChartData.packagesListName, pieChartData.packagesListSize, 'pie', pieChartData.bgColor));
 
+                    const ctxContainer = document.getElementById('package-search-section');
+                    window.scroll(0, this.chartService.findElementPosition(ctxContainer) + (-60));
+                }
             }
     }]
 };
