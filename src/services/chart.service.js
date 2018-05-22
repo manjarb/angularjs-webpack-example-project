@@ -79,7 +79,6 @@ export default class ChartService {
     addNewCanvas(parentId, childId) {
         const newCanvas = document.createElement('canvas');
         newCanvas.setAttribute("id", childId);
-        console.log(parentId, 'parentId');
         document.getElementById(parentId).appendChild(newCanvas);
     }
 

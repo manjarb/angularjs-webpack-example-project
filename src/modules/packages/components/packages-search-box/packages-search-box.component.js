@@ -24,7 +24,6 @@ export const PackagesSearchBoxComponent = {
             }
             
             $onInit() {
-                console.log(this.$ctrl);
             }
 
             renderPieChart(pack) {

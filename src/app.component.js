@@ -105,7 +105,6 @@ export const AppComponent = {
                 }, 150);
 
                 document.getElementById('packages-compare-bar-chart').onclick = (evt) =>{
-                    console.log(this.myChart.getElementsAtEvent(evt), "yoyoy");
                     const activePoints = this.myChart.getElementsAtEvent(evt);
                     if (activePoints.length > 0) {
                         const firstPoint = activePoints[0];
