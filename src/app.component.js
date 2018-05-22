@@ -36,10 +36,8 @@ export const AppComponent = {
                 this.scope.mergedPagesDetails = _.map(packages.data, (obj) => {
                     return _.assign(obj, _.find(convertPagesKey, {page: obj.page}));
                 });
-                const half_length = Math.ceil(this.scope.mergedPagesDetails.length / 2);
+
                 this.scope.pagesPackageData = this.scope.mergedPagesDetails;
-                this.scope.pagesPackageDataLeft = this.scope.mergedPagesDetails.slice(0, half_length);
-                this.scope.pagesPackageDataRight = this.scope.mergedPagesDetails.slice(half_length, this.scope.mergedPagesDetails.length);
 
                 let duplicatePackageArray = [];
                 packages.data.map((pack) => {

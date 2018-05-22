@@ -1,5 +1,6 @@
 <ul class="list-group">
     <li class="list-group-item"
+        draggable="true"
         ng-repeat="page in $ctrl.pagesData">
         {{ page.properties ? returnPageTitle(page.properties.property) : page.page }} <span class="float-right">Packages: {{ page.dependencies.length }}</span>
     </li>
