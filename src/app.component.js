@@ -20,6 +20,7 @@ export const AppComponent = {
 
                 this.scope.initComparePackagesChart = this.initComparePackagesChart.bind(this);
                 this.myChart = null;
+                this.pieChart = null;
             }
 
             $onInit() {
@@ -97,9 +98,11 @@ export const AppComponent = {
                             barThickness : 30
                         }]
                     },
-                    maintainAspectRatio: false,
+                    maintainAspectRatio: false
                 };
-                const ctx = document.getElementById('packages-compare-bar-chart').getContext('2d');
+
+                let chartCanvas = document.getElementById('packages-compare-bar-chart');
+                const ctx = chartCanvas.getContext('2d');
                 const ctxBox = document.getElementById('packages-compare-chart-box');
                 ctxBox.style.width = packagesListSize.length * 45 + "px";
                 if(this.myChart) {
@@ -109,6 +112,26 @@ export const AppComponent = {
                 this.myChart = new Chart(ctx, this.chartService.returnChartObject(packagesListName, packagesListSize, 'bar', packagesColorSet, chartOptions));
                 const ctxContainer = document.getElementById('package-compare-chart-section');
                 window.scroll(0, this.chartService.findElementPosition(ctxContainer) + (-60));
+
+                document.getElementById('packages-compare-bar-chart').onclick = (evt) =>{
+                    const activePoints = this.myChart.getElementsAtEvent(evt);
+                    const firstPoint = activePoints[0];
+                    const label = this.myChart.data.labels[firstPoint._index];
+                    const value = this.myChart.data.datasets[firstPoint._datasetIndex].data[firstPoint._index];
+                    // alert(label + ": " + value);
+                    // 
+                    this.updateSelectPackagePieChart(label, value);
+                };
+            }
+
+            updateSelectPackagePieChart(label, value) {
+                const ctx = document.getElementById('package-pie-chart').getContext('2d');
+
+                if(this.pieChart) {
+                    this.pieChart.destroy();
+                }
+                this.pieChart = new Chart(ctx, this.chartService.returnChartObject(packagesListName, packagesListSize, 'pie', bgColor));
+
             }
     }]
 };

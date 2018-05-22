@@ -19,6 +19,8 @@ export const PackagesSearchBoxComponent = {
                 this.chartService = ChartService;
                 this.$ctrl.selectedPackageName = '';
                 this.scope.renderPieChart = this.renderPieChart.bind(this);
+
+                this.myChart = null;
             }
             
             $onInit() {
@@ -28,7 +30,7 @@ export const PackagesSearchBoxComponent = {
                 this.scope.package.packageName = '';
                 this.$ctrl.selectedPackageName = pack.packageName;
                 const ctx = document.getElementById('package-pie-chart').getContext('2d');
-                const packagesListName = [
+                /*const packagesListName = [
                     `${this.$ctrl.pagesData.length} Pages`,
                     `${pack.packageName} used ${pack.count} times`
                 ];
@@ -40,8 +42,15 @@ export const PackagesSearchBoxComponent = {
                 const bgColor = [
                     "#3e95cd",
                     "#c45850"
-                ];
-                let myChart = new Chart(ctx, this.chartService.returnChartObject(packagesListName, packagesListSize, 'pie', bgColor));
+                ];*/
+
+                const pieChartData = this.chartService.returnPieChartData(this.$ctrl.pagesData, pack);
+                console.log(pieChartData);
+
+                if(this.myChart) {
+                    this.myChart.destroy();
+                }
+                this.myChart = new Chart(ctx, this.chartService.returnChartObject(pieChartData.packagesListName, pieChartData.packagesListSize, 'pie', pieChartData.bgColor));
             }
     }]
 };

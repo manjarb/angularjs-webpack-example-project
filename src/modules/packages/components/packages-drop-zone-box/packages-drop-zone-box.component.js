@@ -48,7 +48,6 @@ export const PackagesDropZoneBoxComponent = {
             }
 
             startComparePackages() {
-                console.log(this.scope.selectedPages);
                 this.$ctrl.onComparePackages({
                     $event: {
                         comparePackages: this.scope.selectedPages

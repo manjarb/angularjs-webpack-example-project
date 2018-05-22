@@ -48,4 +48,25 @@ export default class ChartService {
         }
     }
 
+    returnPieChartData(allPagesData, selectedPageData) {
+        const packagesListName = [
+            `${allPagesData.length} Pages`,
+            `${selectedPageData.packageName} used ${selectedPageData.count} times`
+        ];
+        const packagePercentageUse = this.calculatePercentage(allPagesData.length, selectedPageData.count);
+        const packagesListSize = [
+            100 - packagePercentageUse,
+            packagePercentageUse
+        ];
+        const bgColor = [
+            "#3e95cd",
+            "#c45850"
+        ];
+        return {
+            packagesListName,
+            packagesListSize,
+            bgColor
+        }
+    }
+
 }
