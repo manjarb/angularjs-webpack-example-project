@@ -17,6 +17,9 @@ export const AppComponent = {
                 this.scope.adjustPackageResult = [];
                 this.packagesSevices = PackagesService;
                 this.chartService = ChartService;
+
+                this.scope.initComparePackagesChart = this.initComparePackagesChart.bind(this);
+                this.myChart = null;
             }
 
             $onInit() {
@@ -63,10 +66,49 @@ export const AppComponent = {
                 const chartOptions = {
                     maintainAspectRatio: false,
                 };
-                const ctx = document.getElementById('packages-bar-chart').getContext('2d');
+                // const ctx = document.getElementById('packages-bar-chart').getContext('2d');
                 // let myChart = new Chart(ctx, this.chartService.returnChartObject(packagesListName, packagesListSize, 'horizontalBar', packagesColorSet, chartOptions));
 
                 this.scope.$apply();
+            }
+
+            initComparePackagesChart(pages) {
+                const comparePackages = pages.comparePackages;
+                const duplicateComparePackagesList = this.packagesSevices.returnDuplicatePackagesList(comparePackages);
+                const packagesCountList = this.packagesSevices.returnPackagesCountList(duplicateComparePackagesList);
+
+                const packagesListName = [];
+                const packagesListSize = [];
+                const packagesColorSet = [];
+                packagesCountList.map((result) => {
+                    packagesListName.push(result.packageName);
+                    packagesListSize.push(result.count);
+                    packagesColorSet.push(this.chartService.getRandomColor())
+                });
+
+                const chartOptions = {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }],
+                        xAxes: [{
+                            barThickness : 30
+                        }]
+                    },
+                    maintainAspectRatio: false,
+                };
+                const ctx = document.getElementById('packages-compare-bar-chart').getContext('2d');
+                const ctxBox = document.getElementById('packages-compare-chart-box');
+                ctxBox.style.width = packagesListSize.length * 45 + "px";
+                if(this.myChart) {
+                    this.myChart.destroy();
+                }
+
+
+                this.myChart = new Chart(ctx, this.chartService.returnChartObject(packagesListName, packagesListSize, 'bar', packagesColorSet, chartOptions));
+
             }
     }]
 };

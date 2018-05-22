@@ -2,8 +2,9 @@ import angular from 'angular';
 import './packages-drop-zone-box.component.scss';
 
 export const PackagesDropZoneBoxComponent = {
+    scope: {},
     bindings: {
-
+        onComparePackages: '&'
     },
     template: require('./packages-drop-zone-box.component.html'),
     controller: [
@@ -18,6 +19,7 @@ export const PackagesDropZoneBoxComponent = {
                 this.scope.allowDrop = this.allowDrop;
                 this.scope.onPackageDrop = this.onPackageDrop.bind(this);
                 this.scope.packageDragStart = this.packageDragStart.bind(this);
+                this.scope.startComparePackages = this.startComparePackages.bind(this);
 
                 this.scope.selectedPages = [];
             }
@@ -43,6 +45,15 @@ export const PackagesDropZoneBoxComponent = {
                     this.scope.selectedPages.push(currentDragPage);
                     this.scope.$apply();
                 }
+            }
+
+            startComparePackages() {
+                console.log(this.scope.selectedPages);
+                this.$ctrl.onComparePackages({
+                    $event: {
+                        comparePackages: this.scope.selectedPages
+                    }
+                });
             }
     }]
 };

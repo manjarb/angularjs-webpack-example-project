@@ -20,3 +20,10 @@ body {
 .drop-package-box {
   height: 100%;
 }
+
+.packages-compare-chart-container {
+  overflow-x: scroll;
+  .packages-compare-chart-box {
+    height: 450px;
+  }
+}

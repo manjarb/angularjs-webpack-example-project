@@ -11,16 +11,26 @@
             </div>
             <div class="col-6">
                 <div class="drop-package-box">
-                    <packages-drop-zone-box></packages-drop-zone-box>
+                    <packages-drop-zone-box on-compare-packages="initComparePackagesChart($event)"></packages-drop-zone-box>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="package-chart-section">
+    <!--<section class="package-chart-section">
         <h2 class="homepage-title text-center">Packages Chart</h2>
         <div class="packages-chart-box">
-            <canvas id="packages-bar-chart" height="6000"></canvas>
+            <canvas id="packagpackages-compare-chart-boxes-bar-chart" height="6000"></canvas>
+        </div>
+    </section>-->
+
+    <section class="package-compare-chart-section">
+        <h2 class="homepage-title text-center">Packages Compare Chart</h2>
+        <div class="packages-compare-chart-container">
+            <div class="packages-compare-chart-box"
+                 id="packages-compare-chart-box">
+                <canvas id="packages-compare-bar-chart"></canvas>
+            </div>
         </div>
     </section>
 </div>

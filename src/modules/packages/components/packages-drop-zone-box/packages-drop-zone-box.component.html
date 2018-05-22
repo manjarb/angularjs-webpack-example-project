@@ -1,6 +1,13 @@
 <div class="packages-drop-zone-box bg-light"
      ondragover="angular.element(this).scope().allowDrop(event)"
      ondrop="angular.element(this).scope().onPackageDrop(event)">
+    <div class="button-box">
+        <button type="button"
+                class="btn btn-success btn-lg btn-block"
+                ng-click="startComparePackages()">
+            Compare Packages Start
+        </button>
+    </div>
     <div class="packages-drop-list-box">
         <ul class="list-group">
             <li class="list-group-item"
