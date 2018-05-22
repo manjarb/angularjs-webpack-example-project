@@ -38,4 +38,14 @@ export default class ChartService {
         return (value * 100) / amount;
     }
 
+    findElementPosition(obj) {
+        let curtop = 0;
+        if (obj && obj.offsetParent) {
+            do {
+                curtop += obj.offsetTop;
+            } while (obj = obj.offsetParent);
+            return curtop;
+        }
+    }
+
 }

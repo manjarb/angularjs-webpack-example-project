@@ -4,7 +4,8 @@
     <div class="button-box">
         <button type="button"
                 class="btn btn-success btn-lg btn-block"
-                ng-click="startComparePackages()">
+                ng-click="startComparePackages()"
+                ng-disabled="selectedPages.length <= 0">
             Compare Packages Start
         </button>
     </div>

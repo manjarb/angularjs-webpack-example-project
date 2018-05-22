@@ -106,9 +106,9 @@ export const AppComponent = {
                     this.myChart.destroy();
                 }
 
-
                 this.myChart = new Chart(ctx, this.chartService.returnChartObject(packagesListName, packagesListSize, 'bar', packagesColorSet, chartOptions));
-
+                const ctxContainer = document.getElementById('package-compare-chart-section');
+                window.scroll(0, this.chartService.findElementPosition(ctxContainer) + (-60));
             }
     }]
 };
