@@ -14,13 +14,17 @@ export const PackagesListGroupComponent = {
                 this.$ctrl = $scope.$ctrl;
                 this.packagesSevice = PackagesService;
                 this.scope.returnPageTitle = this.packagesSevice.returnPageTitle;
-                this.scope.packageDragStart = this.packageDragStart.bind(this)
+                this.scope.packageDragStart = this.packageDragStart.bind(this);
             }
             $onInit() {
             }
 
             packageDragStart(e, page) {
                 e.dataTransfer.setData("currentDragPage", JSON.stringify(page));
+                if (this.packagesSevice.checkIfObjectExistByKey(this.$ctrl.pagesData, 'page', page.page)) {
+                    const currentPagePosition = this.packagesSevice.findArrayPositionWithData(this.$ctrl.pagesData, 'page', page.page);
+                    this.$ctrl.pagesData.splice(currentPagePosition, 1);
+                }
             }
         }
     ]

@@ -15,4 +15,25 @@ export default class PackagesService {
         const title = _.find(props, {'-name': 'title'});
         return title['value']['#text'];
     }
+
+    checkIfObjectExistByKey(array, key, value) {
+        let found = false;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i][key] === value) {
+                found = true;
+                break;
+            }
+        }
+
+        return found;
+    }
+
+    findArrayPositionWithData(array, attr, value) {
+        for (let i = 0; i < array.length; i += 1) {
+            if (array[i][attr] === value) {
+                return i;
+            }
+        }
+        return -1;
+    }
 }

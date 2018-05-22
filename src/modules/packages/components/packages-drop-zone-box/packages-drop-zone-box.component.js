@@ -6,30 +6,40 @@ export const PackagesDropZoneBoxComponent = {
 
     },
     template: require('./packages-drop-zone-box.component.html'),
-    controller: class PackagesDropZoneBoxController {
-        constructor($scope) {
-            this.scope = $scope;
-            this.$ctrl = $scope.$ctrl;
-            this.scope.allowDrop = this.allowDrop;
-            this.scope.onPackageDrop = this.onPackageDrop;
+    controller: [
+        'PackagesService',
+        '$scope',
+        class PackagesDropZoneBoxController {
+            constructor(PackagesService, $scope) {
+                this.scope = $scope;
+                this.$ctrl = $scope.$ctrl;
+                this.packagesSevice = PackagesService;
+                this.scope.returnPageTitle = this.packagesSevice.returnPageTitle;
+                this.scope.allowDrop = this.allowDrop;
+                this.scope.onPackageDrop = this.onPackageDrop.bind(this);
 
-            this.scope.selectedPages = [];
-        }
+                this.scope.selectedPages = [];
+            }
 
-        $onInit() {
-        }
+            $onInit() {
+            }
 
-        allowDrop(e) {
-            e.preventDefault();
-        }
+            allowDrop(e) {
+                e.preventDefault();
+            }
 
-        onPackageDrop(e) {
-            const currentDragPage = JSON.parse(e.dataTransfer.getData("currentDragPage"));
-            console.log(JSON.parse(currentDragPage));
-        }
+            packageDragStart(e, page) {
+                e.dataTransfer.setData("currentDragPage", JSON.stringify(page));
+            }
 
-
-    }
+            onPackageDrop(e) {
+                const currentDragPage = JSON.parse(e.dataTransfer.getData("currentDragPage"));
+                if (!this.packagesSevice.checkIfObjectExistByKey(this.scope.selectedPages, 'page', currentDragPage.page)) {
+                    this.scope.selectedPages.push(currentDragPage);
+                    this.scope.$apply();
+                }
+            }
+    }]
 };
 
 export default angular.module('packagesDropZoneBox', [])

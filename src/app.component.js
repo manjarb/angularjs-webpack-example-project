@@ -64,7 +64,7 @@ export const AppComponent = {
                     maintainAspectRatio: false,
                 };
                 const ctx = document.getElementById('packages-bar-chart').getContext('2d');
-                let myChart = new Chart(ctx, this.chartService.returnChartObject(packagesListName, packagesListSize, 'horizontalBar', packagesColorSet, chartOptions));
+                // let myChart = new Chart(ctx, this.chartService.returnChartObject(packagesListName, packagesListSize, 'horizontalBar', packagesColorSet, chartOptions));
 
                 this.scope.$apply();
             }

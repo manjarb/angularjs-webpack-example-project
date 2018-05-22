@@ -1,6 +1,16 @@
 <div class="packages-drop-zone-box bg-light"
      ondragover="angular.element(this).scope().allowDrop(event)"
      ondrop="angular.element(this).scope().onPackageDrop(event)">
+    <div class="packages-drop-list-box">
+        <ul class="list-group">
+            <li class="list-group-item"
+                draggable="true"
+                ondragstart="angular.element(this).scope().packageDragStart(event, angular.element(this).scope().page)"
+                ng-repeat="page in selectedPages">
+                {{ page.properties ? returnPageTitle(page.properties.property) : page.page }} <span class="float-right">Packages: {{ page.dependencies.length }}</span>
+            </li>
+        </ul>
+    </div>
     <p class="text-center">
         <strong>Drop your Pages Here</strong>
     </p>
