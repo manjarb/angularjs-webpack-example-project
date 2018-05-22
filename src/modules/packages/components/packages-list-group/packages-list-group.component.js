@@ -10,6 +10,7 @@ export const PackagesListGroupComponent = {
             this.scope = $scope;
             this.$ctrl = $scope.$ctrl;
             this.scope.returnPageTitle = this.returnPageTitle.bind(this);
+            this.scope.packageDragStart = this.packageDragStart.bind(this)
         }
         $onInit() {
         }
@@ -17,6 +18,11 @@ export const PackagesListGroupComponent = {
         returnPageTitle(props) {
             const title = _.find(props, {'-name': 'title'});
             return title['value']['#text'];
+        }
+
+        packageDragStart(e, page) {
+            console.log(e.target.children[0].id, 'ee');
+            console.log(page, 'page');
         }
     }
 };
