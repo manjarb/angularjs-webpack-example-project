@@ -15,8 +15,16 @@ export const PackagesListGroupComponent = {
                 this.packagesSevice = PackagesService;
                 this.scope.returnPageTitle = this.packagesSevice.returnPageTitle;
                 this.scope.packageDragStart = this.packageDragStart.bind(this);
+                this.scope.allowDrop = this.allowDrop;
+                this.scope.onPackageDrop = this.onPackageDrop.bind(this);
+
             }
+
             $onInit() {
+            }
+
+            allowDrop(e) {
+                e.preventDefault();
             }
 
             packageDragStart(e, page) {
@@ -24,6 +32,14 @@ export const PackagesListGroupComponent = {
                 if (this.packagesSevice.checkIfObjectExistByKey(this.$ctrl.pagesData, 'page', page.page)) {
                     const currentPagePosition = this.packagesSevice.findArrayPositionWithData(this.$ctrl.pagesData, 'page', page.page);
                     this.$ctrl.pagesData.splice(currentPagePosition, 1);
+                }
+            }
+
+            onPackageDrop(e) {
+                const currentDragPage = JSON.parse(e.dataTransfer.getData("currentDragPage"));
+                if (!this.packagesSevice.checkIfObjectExistByKey(this.$ctrl.pagesData, 'page', currentDragPage.page)) {
+                    this.$ctrl.pagesData.push(currentDragPage);
+                    this.scope.$apply();
                 }
             }
         }

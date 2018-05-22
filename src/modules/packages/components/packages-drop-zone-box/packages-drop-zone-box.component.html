@@ -6,7 +6,7 @@
             <li class="list-group-item"
                 draggable="true"
                 ondragstart="angular.element(this).scope().packageDragStart(event, angular.element(this).scope().page)"
-                ng-repeat="page in selectedPages">
+                ng-repeat="page in selectedPages | orderBy: 'page'">
                 {{ page.properties ? returnPageTitle(page.properties.property) : page.page }} <span class="float-right">Packages: {{ page.dependencies.length }}</span>
             </li>
         </ul>

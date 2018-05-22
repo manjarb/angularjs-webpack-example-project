@@ -17,6 +17,7 @@ export const PackagesDropZoneBoxComponent = {
                 this.scope.returnPageTitle = this.packagesSevice.returnPageTitle;
                 this.scope.allowDrop = this.allowDrop;
                 this.scope.onPackageDrop = this.onPackageDrop.bind(this);
+                this.scope.packageDragStart = this.packageDragStart.bind(this);
 
                 this.scope.selectedPages = [];
             }
@@ -30,6 +31,10 @@ export const PackagesDropZoneBoxComponent = {
 
             packageDragStart(e, page) {
                 e.dataTransfer.setData("currentDragPage", JSON.stringify(page));
+                if (this.packagesSevice.checkIfObjectExistByKey(this.scope.selectedPages, 'page', page.page)) {
+                    const currentPagePosition = this.packagesSevice.findArrayPositionWithData(this.scope.selectedPages, 'page', page.page);
+                    this.scope.selectedPages.splice(currentPagePosition, 1);
+                }
             }
 
             onPackageDrop(e) {

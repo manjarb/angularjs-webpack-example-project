@@ -1,4 +1,6 @@
-<ul class="list-group">
+<ul class="list-group"
+    ondragover="angular.element(this).scope().allowDrop(event)"
+    ondrop="angular.element(this).scope().onPackageDrop(event)">
     <li class="list-group-item"
         draggable="true"
         ondragstart="angular.element(this).scope().packageDragStart(event, angular.element(this).scope().page)"
