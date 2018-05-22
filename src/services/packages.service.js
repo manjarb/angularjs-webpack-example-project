@@ -10,4 +10,9 @@ export default class PackagesService {
     async getPagesName() {
         return await this.httpService.get('assets/data/pages-name.json');
     }
+
+    returnPageTitle(props) {
+        const title = _.find(props, {'-name': 'title'});
+        return title['value']['#text'];
+    }
 }

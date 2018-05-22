@@ -12,6 +12,8 @@ export const PackagesDropZoneBoxComponent = {
             this.$ctrl = $scope.$ctrl;
             this.scope.allowDrop = this.allowDrop;
             this.scope.onPackageDrop = this.onPackageDrop;
+
+            this.scope.selectedPages = [];
         }
 
         $onInit() {
@@ -22,7 +24,8 @@ export const PackagesDropZoneBoxComponent = {
         }
 
         onPackageDrop(e) {
-            console.log(e);
+            const currentDragPage = JSON.parse(e.dataTransfer.getData("currentDragPage"));
+            console.log(JSON.parse(currentDragPage));
         }
 
 

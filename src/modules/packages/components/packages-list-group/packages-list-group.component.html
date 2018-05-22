@@ -3,9 +3,6 @@
         draggable="true"
         ondragstart="angular.element(this).scope().packageDragStart(event, angular.element(this).scope().page)"
         ng-repeat="page in $ctrl.pagesData">
-        <div class="drag-list-box-container"
-             id="{{ page.page }}">
-            {{ page.properties ? returnPageTitle(page.properties.property) : page.page }} <span class="float-right">Packages: {{ page.dependencies.length }}</span>
-        </div>
+        {{ page.properties ? returnPageTitle(page.properties.property) : page.page }} <span class="float-right">Packages: {{ page.dependencies.length }}</span>
     </li>
 </ul>
