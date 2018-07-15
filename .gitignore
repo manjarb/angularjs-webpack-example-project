@@ -26,3 +26,6 @@ npm-debug.log
 
 # Cache
 .awcache
+
+by-page.json
+pages-name.json
